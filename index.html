@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para você</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #mensagem, #link, #amor {
+            display: none;
+        }
+
+        button, a {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        button:hover, a:hover {
+            background-color: #e84118;
+        }
+
+        #amor {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="botao">Clique aqui</button>
+    <p id="mensagem">Você precisa clicar no link agora</p>
+    <a id="link" href="#" onclick="mostrarAmor()">Clique aqui agora</a>
+    <p id="amor">EU TE AMO DEMAIS</p>
+
+    <audio id="musica" src="https://www.mboxdrive.com/I%20Wanna%20Be%20Yours.mp3"></audio>
+
+    <script>
+        document.getElementById("botao").addEventListener("click", function() {
+            document.getElementById("mensagem").style.display = "block";
+            document.getElementById("link").style.display = "inline-block";
+        });
+
+        function mostrarAmor() {
+            document.getElementById("amor").style.display = "block";
+            document.getElementById("musica").play();
+        }
+    </script>
+
+</body>
+</html>
